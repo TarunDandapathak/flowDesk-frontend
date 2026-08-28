@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Addtask from "../task/AddTask.jsx";
-import BarChart from "../charts/Barchart.jsx";
+import Barchart from "../charts/Barchart.jsx";
 import DonutChart from "../charts/DonutChart.jsx";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -312,7 +312,7 @@ function Dashboard() {
               </div>
 
 
-              <BarChart tasks={tasks} />
+              <Barchart tasks={tasks} />
 
             </div>
 

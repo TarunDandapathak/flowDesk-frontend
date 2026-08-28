@@ -1,39 +1,4 @@
-// import "./App.css";
 
-// import SignUp from "./components/signup/SignUp.jsx";
-// import Login from "./components/login/Login.jsx";
-// import Timer from "./components/Timer/Timer.jsx";
-// import AddTask from "./components/task/AddTask.jsx";
-// import HomePage from "./components/homepage/HomePage.jsx";
-// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-// import Deshboard from "./components/deshboard/Deshboard.jsx";
-// import ViewTask from "./components/viewtask/ViewTask.jsx";
-
-// function App() {
-
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         {/* Redirect root URL "/" to "/login" */}
-//         <Route path="/" element={<Navigate to="/login" replace />} />
-
-//         {/* Public authentication routes */}
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/signup" element={<SignUp />} />
-
-//         {/* Main application layout and routes */}
-//         <Route path="/app" element={<HomePage />}>
-//           <Route index element={<Navigate to="deshboard" replace />} />
-//           <Route path="deshboard" element={<Deshboard />} />
-//           <Route path="tasks" element={<ViewTask />} />
-//           <Route path="timer" element={<Timer />} />
-//         </Route>
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
-
-// export default App;
 
 
 import "./App.css";
@@ -45,7 +10,7 @@ import HomePage from "./components/homepage/HomePage.jsx";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Deshboard from "./components/deshboard/Deshboard.jsx";
 import { ViewTask } from "./components/viewtask/ViewTask.jsx";
-import About from "../src/components/about/about.jsx";
+import About from "../src/components/about/about";
 import { Toaster } from "react-hot-toast";
 import PageNotFound from "./components/pageNotFound/PageNotFound.jsx";
 import Feedback from "./feedBack/Feedback.jsx";
@@ -57,11 +22,7 @@ import Footer from "./Footer.jsx"
 function App() {
   return (
     <>
-      {/* <SignUp/> */}
-      {/* <Login/> */}
-      {/* <Timer/> */}
-      {/* <AddTask/> */}
-      {/* <HomePage /> */}
+    
       <TimerProvider>
         <BrowserRouter>
           <Toaster

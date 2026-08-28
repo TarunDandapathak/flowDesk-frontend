@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import "./BarChart.css";
+import "./Barchart.css";
 import {
   BarChart as RechartsBarChart,
   Bar,
@@ -26,7 +26,7 @@ import {
 // }
 
 
-function BarChart({ tasks = [] }) {
+function Barchart({ tasks = [] }) {
 
   const getCompletedTasks = (tasks) => {
     const now = new Date();
@@ -123,4 +123,4 @@ function BarChart({ tasks = [] }) {
   );
 }
 
-export default BarChart;
+export default Barchart;
