@@ -1,0 +1,57 @@
+.chart-donut h2 {
+  color: #ffffff;
+}
+
+.priority-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.li-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Fixed: space-between correctly pushes content to opposite edges */
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Priority Dots */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0; /* Prevents dots from stretching or squishing */
+}
+
+.dot.low {
+  background-color: #2ed573;
+}
+
+.dot.medium {
+  background-color: #eccc68;
+}
+
+.dot.high {
+  background-color: #ff6b81;
+}
+
+.label {
+  color: #a4b0be;
+}
+
+.count {
+  color: #ffffff;
+  font-weight: 600;
+}

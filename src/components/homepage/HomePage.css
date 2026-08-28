@@ -1,0 +1,351 @@
+/* ==========================================================================
+   1. Base & Global Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+    background-color: #0d0d16 !important;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Global Overlay Safety Rule */
+[data-rhot-toaster],
+[data-rhot-toaster] * {
+    pointer-events: none !important;
+}
+
+/* ==========================================================================
+   2. Layout & Containers
+   ========================================================================== */
+.dashboard-container {
+    background-color: #0d0d16;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.dashboard {
+    height: 100vh;
+}
+
+.col {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.top-navbar-wrapper {
+
+    position: relative;
+    z-index: 100;
+    font-size: 2rem;
+}
+
+.deshboardLogo {
+    margin-left: 41px !important;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    color: gray;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* ==========================================================================
+   3. Components & UI Elements
+   ========================================================================== */
+.new-btn {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* User Avatar Icon */
+.icon {
+    position: relative !important;
+    z-index: 105 !important;
+    pointer-events: auto !important;
+    touch-action: manipulation;
+    user-select: none;
+    width: 36px;
+    height: 36px;
+    margin: 0 !important;
+    border-radius: 50%;
+    border: 2px solid #7806e2;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #7806e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Profile Dropdown Popup */
+.profile-container,
+.profile-popup {
+    position: absolute !important;
+    top: 55px;
+    right: 0 !important;
+    min-width: 270px;
+    display: flex;
+    flex-direction: column;
+    background: #1b1b1b;
+    border-radius: 10px;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.profile-card:hover {
+    background-color: #2d2d2d;
+}
+
+.MuiButtonBase-root {
+    backdrop-filter: blur(106px);
+
+}
+
+/* Navigation Links */
+.nav-link-custom {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #8080A0;
+    text-decoration: none !important;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link-custom:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link-custom.active {
+    background-color: #1F1A37;
+    font-weight: 500;
+    color: #8B5CF6;
+}
+
+/* ==========================================================================
+   4. Cards & Grid Systems
+   ========================================================================== */
+.allcard,
+.allcard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #171722;
+    border-radius: 10px;
+    padding: 20px;
+    height: 12rem;
+}
+
+.card h2 {
+    color: white;
+    font-size: 34px;
+}
+
+.card p {
+    color: gray;
+    margin-top: 10px;
+}
+
+.card .deshboardIcon {
+    width: 4rem;
+    height: 5rem;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================================================
+   5. Charts & Progress Elements
+   ========================================================================== */
+.full-progress {
+    background-color: #171722;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.weekly-selection {
+    padding-top: 20px;
+}
+
+.weekly-selection h3 {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.inside-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inside-progress p {
+    margin-right: 20px;
+}
+
+.all-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 180px;
+    margin-top: 20px;
+}
+
+.bar {
+    width: 20px;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+
+.days {
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+    margin: 10px;
+}
+
+.section {
+    margin: 25px;
+    background-color: #171722;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.section h3 {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.donut-chart {
+    width: 250px;
+    height: 250px;
+    max-width: 130px;
+    max-height: 130px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: conic-gradient(#ff5b8a 0% 45%, #ffd400 45% 80%, #00d084 80% 100%);
+    position: relative;
+}
+
+.donut-chart::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #111;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chart-card {
+    height: 503px;
+    box-sizing: border-box;
+}
+
+.progress {
+    list-style: none;
+}
+
+.progress li {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.progress span {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.low {
+    background-color: #00d084;
+}
+
+.medium {
+    background-color: #facc15;
+}
+
+.high {
+    background-color: #ff4d6d;
+}
+.css-1ytxl8i {
+    background-color: transparent !important;
+    min-height: auto !important;
+}
+.css-y662n8-MuiDrawer-docked 
+.MuiDrawer-paper {
+    box-sizing: border-box;
+    width: 240px;
+    background-color: TRANSPARENT;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    DISPLAY: NONE !important;
+}
+/* ==========================================================================
+   6. Media Queries
+   ========================================================================== */
+@media (max-width: 767.98px) {
+    .nav-list {
+     
+        display: none !important;
+    }
+
+    .dashboard-logo {
+        margin: auto;
+    }
+
+    .navbar {
+        width: auto !important;
+        /* Allow navbar wrapper to keep its mobile toggle icon visible */
+    }
+
+    .dashboard {
+        width: 100%;
+    }
+
+    .deshboardLogo {
+        margin-left: 0.5rem !important;
+    }
+}

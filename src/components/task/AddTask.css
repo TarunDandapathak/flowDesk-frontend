@@ -1,0 +1,204 @@
+/* Add Task button */
+
+.new-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    color: #7D7D9E
+}
+
+.new-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Popup background */
+
+.popup {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+
+/* Popup box */
+
+.popup-content {
+    position: relative;
+
+    width: 600px;
+    max-width: 90%;
+
+    padding: 25px;
+
+    background: #13131E;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Close button */
+
+.cancle-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.cancle-btn:hover {
+    color: red;
+}
+
+
+/* Heading */
+
+.popup-content h6 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.popup-content hr {
+    margin: 15px 0 20px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+
+/* Labels */
+
+.popup-content label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #757593;
+}
+
+
+/* Text input and textarea */
+
+.popup-content input,
+.popup-content textarea,
+.popup-content select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    margin-bottom: 15px;
+
+    /* border: 1px solid #d1d5db; */
+    border-radius: 6px;
+    background-color: #1C1C2A;
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+/* Focus */
+
+.popup-content input:focus,
+.popup-content textarea:focus,
+.popup-content select:focus {
+    border-color: #433074;
+
+    box-shadow: 0 0 0 1px #433074;
+}
+
+
+/* Description */
+
+.popup-content textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* Priority, status and date */
+
+.task-options {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-start;
+}
+
+.task-options .field {
+    flex: 1;
+}
+
+
+/* Submit button */
+
+.submit-btn {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #8B5CF6;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #8B5CF6;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .popup-content {
+        width: 90%;
+        padding: 20px;
+        /* height:10rem; */
+        /* margin-top: 20px; */
+    }
+
+    .task-options {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .task-options .field {
+        width: 100%;
+    }
+}

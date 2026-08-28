@@ -1,0 +1,351 @@
+/* Container & Background */
+.timer-wrapper {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #0b0c12; */
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 1rem;
+  margin: auto;
+  width: 367px !important;
+  /* margin-top: -29px; */
+}
+
+.timer-card {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 2rem;
+  border: 1px solid #1a1c2b;
+  background-color: #121420;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+/* Mode Selector Segmented Control */
+.mode-selector {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-radius: 0.85rem;
+  background-color: #181a28;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.mode-btn {
+  border: none;
+  background: transparent;
+  color: #64748b;
+  border-radius: 0.6rem;
+  padding: 0.55rem 0;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.2s ease;
+}
+
+.mode-btn:hover {
+  color: #94a3b8;
+}
+
+.mode-btn.active {
+  background-color: #12131d;
+  color: #f8fafc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Circular Timer & SVG Progress Ring */
+.timer-circle {
+  position: relative;
+  margin: 2.25rem 0;
+  display: flex;
+  height: 16rem;
+  width: 16rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #0e101a;
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  stroke: #181b2a;
+}
+
+.progress-ring-bar {
+  transition: stroke-dashoffset 0.5s ease-in-out, stroke 0.3s ease;
+}
+
+.timer-display {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  transition: color 0.3s ease;
+}
+
+.mode-text {
+  margin-top: 0.35rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #64748b;
+}
+
+/* Action Controls */
+.controls-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  color: #cbd5e1;
+}
+
+.play-btn {
+  display: flex;
+  height: 3.75rem;
+  width: 3.75rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 1.2rem;
+  background-color: #8b5cf6;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -2px rgba(139, 92, 246, 0.4);
+  transition: all 0.2s ease;
+}
+
+.play-btn:hover {
+  background-color: #7c3aed;
+  box-shadow: 0 12px 24px -2px rgba(139, 92, 246, 0.5);
+}
+
+.play-btn:active {
+  transform: scale(0.95);
+}
+
+.play-icon {
+  margin-left: 2px;
+}
+
+/* Divider */
+.divider {
+  /* margin: 1.75rem 0 1.25rem 0; */
+  margin: 0.75rem 0 0.25rem 0;
+  width: 100%;
+  border-top: 1px solid #1a1c2b;
+}
+
+/* Sessions Tracker */
+.sessions-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sessions-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #64748b;
+}
+
+.dots-container {
+  margin: 0.6rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  background-color: #1a1c2b;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #8b5cf6;
+}
+
+.session-count {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+/* Custom Mode Grid Adjustment */
+.mode-selector {
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Updated from 3 to 4 */
+}
+
+/* Custom Input Controls */
+.custom-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #181a28;
+  border-radius: 0.75rem;
+  border: 1px solid #23273c;
+}
+
+.custom-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.custom-time-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.custom-input {
+  width: 2.75rem;
+  background: #0e101a;
+  border: 1px solid #2a2e45;
+  border-radius: 0.4rem;
+  color: #f8fafc;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.25rem 0;
+  outline: none;
+}
+
+.custom-input:focus {
+  border-color: #f59e0b;
+}
+
+.custom-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Hide number input spinners */
+.custom-input::-webkit-outer-spin-button,
+.custom-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.custom-input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.custom-colon {
+  color: #64748b;
+  font-weight: 700;
+}
+.study-data-section {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.study-data-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #e2e8f0;
+  text-align: left;
+}
+
+.study-data-empty {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.study-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 4px;
+  width: 100%;
+}
+
+.study-history-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.study-item-mode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mode-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  color: #0f172a;
+}
+
+.study-duration {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #cbd5e1;
+}
+
+.study-item-date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}

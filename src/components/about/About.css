@@ -1,0 +1,394 @@
+.about-page {
+  background: #101114;
+  color: #fff;
+  /* padding-bottom: 40px; */
+  display: block;
+  width: 100%;
+}
+
+/* ================= WHAT WE DO ================= */
+
+.what-we-do {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 35px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 5%;
+}
+
+.what-left {
+  background: #17191e;
+  border: 1px solid #303139;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.what-left p {
+  color: #b8b8c2;
+  line-height: 1.7;
+}
+
+.what-left ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.what-left li {
+  position: relative;
+  color: #ddd;
+  margin: 18px 0;
+  font-size: 14px;
+}
+
+.what-left li input[type="checkbox"] {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  vertical-align: middle;
+  color: #7757e8;
+}
+
+.folder-icon {
+  color: blueviolet;
+  font-size: 24px;
+}
+
+i {
+  color: #6366f1;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+  border: 1px solid #303139;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.feature-card {
+  background: #17191e;
+  border: 1px solid #303139;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 145px;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #7258e5;
+}
+
+.feature-icon {
+  width: 38px;
+  height: 38px;
+  background: #29205d;
+  color: #8b72f1;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  font-size: 15px;
+  margin: 5px 0 10px;
+}
+
+.feature-card p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ================= HOW IT WORKS ================= */
+
+.how-it-works {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 5% 60px;
+  text-align: center;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.step {
+  position: relative;
+  padding: 10px;
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-top: 2px dotted #444;
+  top: 35px;
+  left: 65%;
+  z-index: 0;
+}
+
+.step-icon {
+  position: relative;
+  z-index: 1;
+  width: 55px;
+  height: 55px;
+  margin: auto;
+  border-radius: 50%;
+  background: #29205d;
+  color: #927af4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.step h3 {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.step p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ================= INFO CARDS ================= */
+
+.info-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 5% 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.info-card {
+  border-radius: 10px;
+  padding: 22px;
+  min-height: 220px;
+  border: 1px solid #303139;
+}
+
+.choose {
+  background: #1d1c28;
+}
+
+.vision {
+  background: #1a242d;
+}
+
+.future {
+  background: #18251f;
+}
+
+.info-card h2 {
+  font-size: 18px;
+}
+
+.info-card p {
+  color: #b7b7bf;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ================= TEAM ================= */
+
+.team-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 5% 50px;
+  /* text-align: center; */
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  /* Larger section heading */
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* Larger grid tracks */
+  gap: 2.5rem;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  /* Larger interior card spacing */
+  background: #171722;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.avatar {
+  width: 80px;
+  /* Scaled up avatar dimensions */
+  height: 80px;
+  min-width: 80px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  /* Scaled initials font */
+  font-weight: 600;
+}
+
+.team-card h3 {
+  font-size: 1.5rem;
+  /* Scaled name text */
+  margin: 0 0 0.25rem 0;
+}
+
+.team-card p {
+  font-size: 1.1rem;
+  /* Scaled role text */
+  color: #6b7280;
+  margin: 0 0 1rem 0;
+}
+
+.socials {
+  display: flex;
+  gap: 8px;
+  /* margin-top: 10px; */
+}
+
+/* ================= CTA ================= */
+
+.cta-section {
+  max-width: 1100px;
+  margin: 10px auto 0;
+  padding: 25px 35px;
+  background: linear-gradient(90deg, #32227c, #29205d);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-section h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.cta-section p {
+  margin: 0;
+  color: #bbb;
+}
+
+.cta-section button {
+  background: white;
+  color: #222;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cta-section button:hover {
+  transform: scale(1.03);
+}
+
+.linkedin-icon,
+.twitter-icon,
+.email-icon {
+  width: 25px;
+  height: 25px;
+  /* background: #6366f1; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkedin-icon span,
+.twitter-icon span {
+  color: white;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.linkedin-icon a {
+  text-decoration: none;
+}
+
+.email-icon i {
+  /* font-size: 25px; */
+}
+
+.socials>div {
+  width: 38px;
+  height: 38px;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .what-we-do {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .feature-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .step:not(:last-child)::after {
+    display: none;
+  }
+}

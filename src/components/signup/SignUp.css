@@ -1,0 +1,81 @@
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  min-height: 100vh;
+}
+
+.left-section {
+  background: linear-gradient(135deg, #37189b 0%, #6812ed 50%, #8206ff 100%);
+}
+
+.rating {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #924def;
+  background-color: #7d27e9;
+  height: 113px;
+}
+
+.user-icon .Customericon {
+  width: 36px;
+  height: 36px;
+  margin-left: -10px !important;
+  border-radius: 50%;
+  border: 2px solid #37189b;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.iconBolt {
+  width: 40px;
+  height: 40px;
+  background-color: #7806E2;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+.right-section {
+  background-color: #0d0d16;
+}
+
+.inputField {
+  height: 3rem;
+  border-radius: 12px;
+  background-color: #1c1c2a;
+  border: 1px solid #2e2e42;
+  color: #ffffff;
+  outline: none;
+  padding: 0 16px;
+  transition: border-color 0.2s ease;
+}
+
+.inputField span {
+
+  color: #ffffff !important;
+
+}
+
+.inputField:focus {
+  border-color: #8b5cf6;
+}
+
+/* Custom max width helper for form wrapper */
+.max-w-md {
+  max-width: 420px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button[type="submit"] {
+  border-radius: 12px;
+}
