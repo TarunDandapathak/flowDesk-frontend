@@ -10,7 +10,7 @@ import HomePage from "./components/homepage/HomePage.jsx";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Deshboard from "./components/deshboard/Deshboard.jsx";
 import { ViewTask } from "./components/viewtask/ViewTask.jsx";
-import About from "../src/components/about/about";
+import About from "./components/about/About.jsx";
 import { Toaster } from "react-hot-toast";
 import PageNotFound from "./components/pageNotFound/PageNotFound.jsx";
 import Feedback from "./feedBack/Feedback.jsx";

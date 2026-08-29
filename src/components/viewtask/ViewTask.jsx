@@ -68,7 +68,7 @@ const TaskItem = memo(function TaskItem({ task, index, onEdit, onDelete }) {
           <p className="text-sm!"> {new Date(task.dueDate).toLocaleDateString("en-US", {
             month: "long",
             day: "numeric",
-            timeZone: "UTC",
+
           })}</p>
         </span>
       </div>
