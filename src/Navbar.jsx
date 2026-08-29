@@ -114,7 +114,7 @@ function DrawerAppBar(props) {
                 ))}
             </List>
 
-            {/* Bottom Exit Action */}
+            {/* Bottom Exiting Action */}
             <Box sx={{ p: 2 }}>
                 <IconButton sx={{ color: '#A7A9BE' }}>
                     <ExitToAppIcon />
