@@ -16,6 +16,8 @@
   color: var(--footer-text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
+  position :absolute;
+  z-index:999
 }
 
 /* Inner Layout Wrapper */
