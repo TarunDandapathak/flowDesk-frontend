@@ -348,7 +348,10 @@ body {
     .deshboardLogo {
         margin-left: 0.5rem !important;
     }
-    .top-navbar-wrapper{
+    
+}
+@media (min-width:  767.98px): {
+     .top-navbar-wrapper{
         display: none;
     }
 }
