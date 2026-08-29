@@ -6,16 +6,27 @@ import { showSuccessToast, showErrorToast } from "../notification/Notify"
 
 const now = new Date();
 
+// const pad = (num) => String(num).padStart(2, "0");
 const pad = (num) => String(num).padStart(2, "0");
+
+const formatDateTimeLocal = (date) => {
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(
+    date.getDate()
+  )}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+};
 
 const defaultFormData = {
   title: "",
   description: "",
   priority: "high",
   status: "todo",
-  dueDate: `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(
-    now.getDate()
-  )}T23:59`,
+  // dueDate: `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(
+  //   now.getDate()
+  // )}T23:59`,
+   dueDate: formatDateTimeLocal(new Date()).replace(
+    /T\d{2}:\d{2}$/,
+    "T23:59"
+  ),
 };
 
 function AddTask({ isOpen, onClose, onTaskSaved, taskData }) {
@@ -36,11 +47,12 @@ function AddTask({ isOpen, onClose, onTaskSaved, taskData }) {
           description: taskData.description || "",
           priority: taskData.priority || "high",
           status: taskData.status || "todo",
-          dueDate: date
-            ? `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(
-              date.getDate()
-            )}T${pad(date.getHours())}:${pad(date.getMinutes())}`
-            : ""
+          // dueDate: date
+          //   ? `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(
+          //     date.getDate()
+          //   )}T${pad(date.getHours())}:${pad(date.getMinutes())}`
+          //   : ""
+           dueDate: date ? formatDateTimeLocal(date) : "",
         });
       } else {
         setFormData(defaultFormData);
