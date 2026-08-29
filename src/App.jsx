@@ -83,7 +83,6 @@ function App() {
               <Route path="/app/feedback" element={<Feedback />} />
               <Route path="/app/policy" element={<PrivacyPolicy />} />
               <Route path="/app/term" element={<TermsOfService />} />
-                <Footer />
             </Route>
             <Route path="signup" element={<SignUp />} />
             <Route path="login" element={<Login />} />
@@ -93,7 +92,7 @@ function App() {
 
 
           </Routes>
-        
+         <Footer />
         </BrowserRouter>
       </TimerProvider>
     </>
