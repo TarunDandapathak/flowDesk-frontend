@@ -21,7 +21,7 @@ const defaultFormData = {
 function AddTask({ isOpen, onClose, onTaskSaved, taskData }) {
   const [formData, setFormData] = useState(defaultFormData);
   const [loading, setLoading] = useState(false);
-
+  const API_URL = "https://flow-desk-backend-ten.vercel.app";
   useEffect(() => {
     if (isOpen) {
       if (taskData) {
@@ -67,7 +67,7 @@ function AddTask({ isOpen, onClose, onTaskSaved, taskData }) {
       if (taskData && taskId) {
         // EDIT TASK
         response = await axios.patch(
-          `http://localhost:8080/api/user/${taskId}/task`,
+          `${API_URL}/api/user/${taskId}/task`,
           formData,
           { withCredentials: true }
         );
@@ -77,7 +77,7 @@ function AddTask({ isOpen, onClose, onTaskSaved, taskData }) {
       } else {
         // CREATE TASK
         response = await axios.post(
-          "http://localhost:8080/api/user/task",
+          `${API_URL}/api/user/task`,
           formData,
           { withCredentials: true }
         );
@@ -157,13 +157,13 @@ function AddTask({ isOpen, onClose, onTaskSaved, taskData }) {
                 onChange={handleChange}
               >
 
-               {taskData ?(
-                <>
+                {taskData ? (
+                  <>
+                    <option value="todo">To Do</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="done">Done</option>
+                  </>) :
                   <option value="todo">To Do</option>
-                  <option value="in-progress">In Progress</option>
-                  <option value="done">Done</option>
-                </>):
-                <option value="todo">To Do</option>
                 }
               </select>
             </div>

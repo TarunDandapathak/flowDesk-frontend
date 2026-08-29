@@ -6,6 +6,8 @@ import { showSuccessToast, showErrorToast } from "../notification/Notify";
 
 
 function SignUp() {
+  const API_URL = "https://flow-desk-backend-ten.vercel.app";
+
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [step, setStep] = useState(1);
@@ -41,7 +43,7 @@ function SignUp() {
       };
 
       await axios.post(
-        "http://localhost:8080/api/auth/user/register",
+        `${API_URL}/api/auth/user/register`,
         data,
         { withCredentials: true }
       );
@@ -67,7 +69,7 @@ function SignUp() {
       };
 
       await axios.post(
-        "http://localhost:8080/api/auth/user/otp-verify",
+        `${API_URL}/api/auth/user/otp-verify`,
         verifyOtp,
         { withCredentials: true }
       );

@@ -10,6 +10,7 @@ const DEFAULT_CONFIG = {
 const TimerContext = createContext();
 
 export const TimerProvider = ({ children }) => {
+  
   const [mode, setMode] = useState(() => localStorage.getItem('timer_mode') || 'focus');
   const [modeConfig, setModeConfig] = useState(DEFAULT_CONFIG);
   const [isRunning, setIsRunning] = useState(false);
@@ -31,8 +32,9 @@ export const TimerProvider = ({ children }) => {
 
   const sendTimerData = async (completedMode, duration) => {
     try {
+      const API_URL = "https://flow-desk-backend-ten.vercel.app";
       await axios.post(
-        'http://localhost:8080/api/user/timer',
+        `${API_URL}/api/user/timer`,
         {
           mode: completedMode,
           durationInSeconds: duration,
@@ -47,8 +49,9 @@ export const TimerProvider = ({ children }) => {
 
   // Wrapped in useCallback so reference stays stable across renders
   const getStudyData = useCallback(async () => {
+    const API_URL = "https://flow-desk-backend-ten.vercel.app";
     try {
-      const response = await axios.get('http://localhost:8080/api/user/timer', {
+      const response = await axios.get(`${API_URL}/api/user/timer`, {
         withCredentials: true,
       });
       return response.data;

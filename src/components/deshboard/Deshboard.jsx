@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 
 function Dashboard() {
+  const API_URL = "https://flow-desk-backend-ten.vercel.app";
   const navigate = useNavigate();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,7 +27,7 @@ function Dashboard() {
   const getData = async () => {
     try {
       const fetchdata = await axios.get(
-        "http://localhost:8080/api/user/task",
+        `${API_URL}/api/user/task`,
         {
           withCredentials: true,
         }
@@ -35,7 +36,7 @@ function Dashboard() {
       // Get tasks
       const tasks = fetchdata.data.tasks;
 
-    
+
       // Update tasks state so charts also get the latest data
       setTasks(tasks);
 
@@ -62,7 +63,7 @@ function Dashboard() {
         return dueDate >= startOfToday && dueDate <= endOfToday;
       });
       setTotalTasks(totalTask.length);
-     
+
       // =====================================================
       // IN-PROGRESS TASKS - TODAY ONLY
       // =====================================================
@@ -134,7 +135,7 @@ function Dashboard() {
   useEffect(() => {
     getData();
   }, []);
-  
+
 
   // =====================================================
   // OPEN ADD TASK MODAL
@@ -168,7 +169,7 @@ function Dashboard() {
   // CURRENT DATE
   // =====================================================
   const date = new Date();
-// Tuesday, August 25, 2026 --it show like this 
+  // Tuesday, August 25, 2026 --it show like this 
 
   const formattedDate = date.toLocaleDateString("en-US", {
     weekday: "long",

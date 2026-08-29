@@ -13,6 +13,7 @@ export default function Feedback() {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    const API_URL = "https://flow-desk-backend-ten.vercel.app";
     e.preventDefault();
 
     if (!message.trim()) {
@@ -24,7 +25,7 @@ export default function Feedback() {
 
     try {
       await axios.post(
-        "http://localhost:8080/api/user/feedback",
+        `${API_URL}/api/user/feedback`,
         {
           rating,
           category,

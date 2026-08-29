@@ -5,6 +5,8 @@ import axios from "axios";
 import { showSuccessToast, showErrorToast } from "../notification/Notify"
 
 function Login() {
+  const API_URL = "https://flow-desk-backend-ten.vercel.app";
+
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -35,7 +37,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/auth/user/login",
+        `${API_URL}/api/auth/user/login`,
         formData,
         {
           withCredentials: true,

@@ -9,6 +9,7 @@ import { MessageCircleMore } from 'lucide-react';
 import { useTimer } from "../Timer/TimerContext.jsx";
 
 function HomePage() {
+  const API_URL = "https://flow-desk-backend-ten.vercel.app";
   //edited
   const { pauseTimer } = useTimer();
   const [open, setOpen] = useState(false);
@@ -25,7 +26,7 @@ function HomePage() {
     try {
       pauseTimer();
 
-      await axios.get("http://localhost:8080/api/auth/user/logout", {
+      await axios.get(`${API_URL}/api/auth/user/logout`, {
         withCredentials: true
       });
       //edited

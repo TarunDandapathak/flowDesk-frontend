@@ -94,8 +94,9 @@ function ViewTask() {
   // Fetch data - only show loading skeleton on initial page load
   const fetchData = useCallback(async (isInitial = false) => {
     if (isInitial) setLoading(true);
+    const API_URL = "https://flow-desk-backend-ten.vercel.app";
     try {
-      const response = await axios.get("http://localhost:8080/api/user/task", {
+      const response = await axios.get(`${API_URL}/api/user/task`, {
         withCredentials: true,
       });
       setTasks(response.data.tasks || []);
@@ -137,12 +138,13 @@ function ViewTask() {
 
   // Optimistic deletion: update UI immediately without triggering full re-fetch/loading
   const handleDeleteTask = useCallback(async (taskId) => {
+    const API_URL = "https://flow-desk-backend-ten.vercel.app";
     // Save previous state for rollback on failure
     const previousTasks = [...tasks];
     setTasks((prev) => prev.filter((t) => (t._id || t.id) !== taskId));
 
     try {
-      await axios.delete(`http://localhost:8080/api/user/${taskId}/task`, {
+      await axios.delete(`${API_URL}/api/user/${taskId}/task`, {
         withCredentials: true,
       });
       showSuccessToast("Successfully Task Deleted")
