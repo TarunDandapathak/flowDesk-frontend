@@ -353,5 +353,6 @@ body {
 @media (min-width:  767.98px): {
      .top-navbar-wrapper{
         display: none;
+        
     }
 }
