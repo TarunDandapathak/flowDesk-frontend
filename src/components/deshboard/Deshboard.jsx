@@ -40,7 +40,7 @@ function Dashboard() {
       // Update tasks state so charts also get the latest data
       setTasks(tasks);
 
-      // console.log("Updated tasks:", tasks);
+      console.log("Updated tasks:", tasks);
 
       // =====================================================
       // TODAY START
